@@ -1,0 +1,294 @@
+    .navbar-custom {
+      background-color: #063d38;
+      min-height: 106px;
+    }
+
+    .navbar-brand {
+      color: #f7e9e1 !important;
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 1;
+      white-space: nowrap;
+      left: 45% !important;
+    }
+
+    .navbar-nav .nav-link {
+      color: #f7e9e1 !important;
+      font-size: 19px;
+      font-weight: 400;
+      padding: 0 !important;
+      white-space: nowrap;
+    }
+
+    .navbar-nav {
+      gap: 30px;
+    }
+
+    .consultation-btn {
+      background-color: #f7e9e1;
+      color: #111;
+      border: none;
+      border-radius: 7px;
+      padding: 10px 18px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .consultation-btn:hover {
+      background-color: #fff;
+      color: #111;
+    }
+
+/* HERO */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            min-height: 560px;
+            overflow: hidden;
+            background: #333;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Dark gradient at bottom */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0) 45%,
+                    rgba(0, 0, 0, 0.10) 60%,
+                    rgba(0, 0, 0, 0.72) 100%
+                );
+        }
+
+        /* Main content */
+        .hero-content {
+            position: absolute;
+            z-index: 3;
+            left: 50%;
+            bottom: 24px;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero-title {
+            margin: 0 0 18px;
+            color: #fff;
+            font-size: clamp(28px, 3vw, 38px);
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, .35);
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 9px 32px;
+            border: 0;
+            border-radius: 9px;
+            background: #fff0e5;
+            color: #111;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all .25s ease;
+        }
+
+        .hero-btn:hover {
+            background: #fff;
+            color: #111;
+            transform: translateY(-2px);
+        }
+
+        /* Preview cards */
+        .preview-container {
+            position: absolute;
+            z-index: 4;
+            right: 7.5%;
+            top: 120px;
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .preview-card {
+            width: 170px;
+            height: 270px;
+            overflow: hidden;
+            border: 4px solid rgba(255, 255, 255, .85);
+            border-radius: 15px;
+            background: #ddd;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, .2);
+        }
+
+        .preview-card img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .preview-card.small {
+            width: 145px;
+            height: 265px;
+            border-radius: 14px 0 0 14px;
+            opacity: .95;
+        }
+
+        /* Navigation buttons */
+        .slider-controls {
+            position: absolute;
+            z-index: 5;
+            right: 5.5%;
+            bottom: 102px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .slider-btn {
+            width: 23px;
+            height: 23px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .92);
+            color: #777;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 1;
+            cursor: pointer;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, .15);
+            transition: .2s ease;
+        }
+
+        .slider-btn:hover {
+            background: #fff;
+            color: #222;
+            transform: scale(1.08);
+        }
+
+        /* Tablet */
+        @media (max-width: 992px) {
+
+            .hero-section {
+                min-height: 520px;
+            }
+
+            .preview-container {
+                right: 4%;
+                top: 100px;
+                gap: 10px;
+            }
+
+            .preview-card {
+                width: 135px;
+                height: 230px;
+            }
+
+            .preview-card.small {
+                width: 120px;
+                height: 225px;
+            }
+
+            .slider-controls {
+                right: 4%;
+                bottom: 105px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .hero-section {
+                min-height: 600px;
+            }
+
+            .preview-container {
+                top: 30px;
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+                width: 90%;
+                justify-content: center;
+            }
+
+            .preview-card {
+                width: 145px;
+                height: 220px;
+            }
+
+            .preview-card.small {
+                display: none;
+            }
+
+            .slider-controls {
+                right: 50%;
+                transform: translateX(50%);
+                bottom: 105px;
+            }
+
+            .hero-content {
+                bottom: 30px;
+                padding: 0 20px;
+            }
+
+            .hero-title {
+                font-size: 28px;
+                margin-bottom: 16px;
+            }
+
+            .hero-btn {
+                font-size: 15px;
+                padding: 10px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero-section {
+                min-height: 560px;
+            }
+
+            .preview-container {
+                top: 25px;
+            }
+
+            .preview-card {
+                width: 130px;
+                height: 210px;
+            }
+
+            .hero-title {
+                font-size: 25px;
+            }
+
+            .hero-btn {
+                padding: 9px 22px;
+            }
+        }
+
+    @media (max-width: 991px) {
+      .navbar-brand {
+        font-size: 32px;
+      }
+
+      .navbar-nav {
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .consultation-btn {
+        margin-top: 15px;
+      }
+    }
